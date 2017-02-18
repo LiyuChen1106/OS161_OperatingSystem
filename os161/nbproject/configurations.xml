@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+        <df name="cat">
+          <in>cat.c</in>
+        </df>
+        <df name="cp">
+          <in>cp.c</in>
+        </df>
+        <df name="false">
+          <in>false.c</in>
+        </df>
+        <df name="ln">
+          <in>ln.c</in>
+        </df>
+        <df name="ls">
+          <in>ls.c</in>
+        </df>
+        <df name="mkdir">
+          <in>mkdir.c</in>
+        </df>
+        <df name="mv">
+          <in>mv.c</in>
+        </df>
+        <df name="pwd">
+          <in>pwd.c</in>
+        </df>
+        <df name="rm">
+          <in>rm.c</in>
+        </df>
+        <df name="rmdir">
+          <in>rmdir.c</in>
+        </df>
+        <df name="sh">
+          <in>sh.c</in>
+        </df>
+        <df name="sync">
+          <in>sync.c</in>
+        </df>
+        <df name="true">
+          <in>true.c</in>
+        </df>
+      </df>
+      <df name="kern">
+        <df name="arch">
+          <df name="mips">
+            <df name="mips">
+              <in>cache_mips1.S</in>
+              <in>dumbvm.c</in>
+              <in>exception.S</in>
+              <in>interrupt.c</in>
+              <in>lamebus_mips.c</in>
+              <in>pcb.c</in>
+              <in>ram.c</in>
+              <in>spl.c</in>
+              <in>start.S</in>
+              <in>switch.S</in>
+              <in>syscall.c</in>
+              <in>threadstart.S</in>
+              <in>tlb_mips1.S</in>
+              <in>trap.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="asst1">
+          <in>catlock.c</in>
+          <in>catsem.c</in>
+          <in>stoplight.c</in>
+        </df>
+        <df name="dev">
+          <df name="generic">
+            <in>beep.c</in>
+            <in>console.c</in>
+            <in>pseudorand.c</in>
+            <in>pseudorand_att.c</in>
+            <in>random.c</in>
+            <in>rtclock.c</in>
+          </df>
+          <df name="lamebus">
+            <in>beep_ltimer.c</in>
+            <in>con_lscreen.c</in>
+            <in>con_lser.c</in>
+            <in>emu.c</in>
+            <in>emu_att.c</in>
+            <in>lamebus.c</in>
+            <in>lhd.c</in>
+            <in>lhd_att.c</in>
+            <in>lnet.c</in>
+            <in>lnet_att.c</in>
+            <in>lrandom.c</in>
+            <in>lrandom_att.c</in>
+            <in>lscreen.c</in>
+            <in>lscreen_att.c</in>
+            <in>lser.c</in>
+            <in>lser_att.c</in>
+            <in>ltimer.c</in>
+            <in>ltimer_att.c</in>
+            <in>ltrace.c</in>
+            <in>ltrace_att.c</in>
+            <in>random_lrandom.c</in>
+            <in>rtclock_ltimer.c</in>
+          </df>
+          <in>init.c</in>
+        </df>
+        <df name="fs">
+          <df name="sfs">
+            <in>sfs_fs.c</in>
+            <in>sfs_io.c</in>
+            <in>sfs_vnode.c</in>
+          </df>
+          <df name="vfs">
+            <in>device.c</in>
+            <in>devnull.c</in>
+            <in>vfscwd.c</in>
+            <in>vfslist.c</in>
+            <in>vfslookup.c</in>
+            <in>vfspath.c</in>
+            <in>vnode.c</in>
+          </df>
+        </df>
+        <df name="lib">
+          <in>array.c</in>
+          <in>bitmap.c</in>
+          <in>copyinout.c</in>
+          <in>kgets.c</in>
+          <in>kheap.c</in>
+          <in>kprintf.c</in>
+          <in>misc.c</in>
+          <in>ntoh.c</in>
+          <in>queue.c</in>
+        </df>
+        <df name="main">
+          <in>main.c</in>
+          <in>menu.c</in>
+        </df>
+        <df name="test">
+          <in>arraytest.c</in>
+          <in>bitmaptest.c</in>
+          <in>fstest.c</in>
+          <in>malloctest.c</in>
+          <in>nettest.c</in>
+          <in>queuetest.c</in>
+          <in>synchtest.c</in>
+          <in>threadtest.c</in>
+          <in>tt3.c</in>
+        </df>
+        <df name="thread">
+          <in>hardclock.c</in>
+          <in>scheduler.c</in>
+          <in>synch.c</in>
+          <in>thread.c</in>
+        </df>
+        <df name="userprog">
+          <in>loadelf.c</in>
+          <in>runprogram.c</in>
+          <in>uio.c</in>
+        </df>
+        <df name="vm">
+          <in>addrspace.c</in>
+        </df>
+      </df>
+      <df name="lib">
+        <df name="crt0">
+          <in>mips-crt0.S</in>
+        </df>
+        <df name="hostcompat">
+          <in>err.c</in>
+          <in>hostcompat.c</in>
+          <in>time.c</in>
+        </df>
+        <df name="libc">
+          <in>__assert.c</in>
+          <in>__printf.c</in>
+          <in>__puts.c</in>
+          <in>abort.c</in>
+          <in>atoi.c</in>
+          <in>bzero.c</in>
+          <in>err.c</in>
+          <in>errno.c</in>
+          <in>exit.c</in>
+          <in>getchar.c</in>
+          <in>getcwd.c</in>
+          <in>malloc.c</in>
+          <in>memcmp.c</in>
+          <in>memcpy.c</in>
+          <in>memmove.c</in>
+          <in>memset.c</in>
+          <in>mips-setjmp.S</in>
+          <in>printf.c</in>
+          <in>putchar.c</in>
+          <in>puts.c</in>
+          <in>random.c</in>
+          <in>snprintf.c</in>
+          <in>strcat.c</in>
+          <in>strchr.c</in>
+          <in>strcmp.c</in>
+          <in>strcpy.c</in>
+          <in>strerror.c</in>
+          <in>strlen.c</in>
+          <in>strrchr.c</in>
+          <in>strtok.c</in>
+          <in>strtok_r.c</in>
+          <in>syscalls-mips.S</in>
+          <in>system.c</in>
+          <in>time.c</in>
+        </df>
+      </df>
+      <df name="sbin">
+        <df name="dumpsfs">
+          <in>dumpsfs.c</in>
+        </df>
+        <df name="halt">
+          <in>halt.c</in>
+        </df>
+        <df name="mksfs">
+          <in>disk.c</in>
+          <in>mksfs.c</in>
+          <in>support.c</in>
+        </df>
+        <df name="poweroff">
+          <in>poweroff.c</in>
+        </df>
+        <df name="reboot">
+          <in>reboot.c</in>
+        </df>
+      </df>
+      <df name="testbin">
+        <df name="add">
+          <in>add.c</in>
+        </df>
+        <df name="argtest">
+          <in>argtest.c</in>
+        </df>
+        <df name="badcall">
+          <in>bad_chdir.c</in>
+          <in>bad_close.c</in>
+          <in>bad_dup2.c</in>
+          <in>bad_execv.c</in>
+          <in>bad_fsync.c</in>
+          <in>bad_ftruncate.c</in>
+          <in>bad_getcwd.c</in>
+          <in>bad_getdirentry.c</in>
+          <in>bad_ioctl.c</in>
+          <in>bad_link.c</in>
+          <in>bad_lseek.c</in>
+          <in>bad_mkdir.c</in>
+          <in>bad_open.c</in>
+          <in>bad_pipe.c</in>
+          <in>bad_read.c</in>
+          <in>bad_readlink.c</in>
+          <in>bad_reboot.c</in>
+          <in>bad_remove.c</in>
+          <in>bad_rename.c</in>
+          <in>bad_rmdir.c</in>
+          <in>bad_sbrk.c</in>
+          <in>bad_stat.c</in>
+          <in>bad_symlink.c</in>
+          <in>bad_time.c</in>
+          <in>bad_waitpid.c</in>
+          <in>bad_write.c</in>
+          <in>common_buf.c</in>
+          <in>common_fds.c</in>
+          <in>common_path.c</in>
+          <in>driver.c</in>
+        </df>
+        <df name="bigfile">
+          <in>bigfile.c</in>
+        </df>
+        <df name="conman">
+          <in>conman.c</in>
+        </df>
+        <df name="crash">
+          <in>crash.c</in>
+        </df>
+        <df name="ctest">
+          <in>ctest.c</in>
+        </df>
+        <df name="dirconc">
+          <in>dirconc.c</in>
+        </df>
+        <df name="dirseek">
+          <in>dirseek.c</in>
+        </df>
+        <df name="dirtest">
+          <in>dirtest.c</in>
+        </df>
+        <df name="f_test">
+          <in>f_read.c</in>
+          <in>f_test.c</in>
+          <in>f_write.c</in>
+        </df>
+        <df name="farm">
+          <in>farm.c</in>
+        </df>
+        <df name="faulter">
+          <in>faulter.c</in>
+        </df>
+        <df name="filetest">
+          <in>filetest.c</in>
+        </df>
+        <df name="forkbomb">
+          <in>forkbomb.c</in>
+        </df>
+        <df name="forkexecbomb">
+          <in>forkexecbomb.c</in>
+        </df>
+        <df name="forktest">
+          <in>forktest.c</in>
+        </df>
+        <df name="guzzle">
+          <in>guzzle.c</in>
+        </df>
+        <df name="hash">
+          <in>hash.c</in>
+        </df>
+        <df name="hog">
+          <in>hog.c</in>
+        </df>
+        <df name="huge">
+          <in>huge.c</in>
+        </df>
+        <df name="kitchen">
+          <in>kitchen.c</in>
+        </df>
+        <df name="malloctest">
+          <in>malloctest.c</in>
+        </df>
+        <df name="matmult">
+          <in>matmult-orig.c</in>
+          <in>matmult.c</in>
+        </df>
+        <df name="palin">
+          <in>palin.c</in>
+        </df>
+        <df name="parallelvm">
+          <in>parallelvm.c</in>
+        </df>
+        <df name="randcall">
+          <in>main.c</in>
+        </df>
+        <df name="rmdirtest">
+          <in>rmdirtest.c</in>
+        </df>
+        <df name="rmtest">
+          <in>rmtest.c</in>
+        </df>
+        <df name="sink">
+          <in>sink.c</in>
+        </df>
+        <df name="sort">
+          <in>sort.c</in>
+        </df>
+        <df name="stacktest">
+          <in>stacktest.c</in>
+        </df>
+        <df name="sty">
+          <in>sty.c</in>
+        </df>
+        <df name="tail">
+          <in>tail.c</in>
+        </df>
+        <df name="tictac">
+          <in>tictac.c</in>
+        </df>
+        <df name="triplehuge">
+          <in>triple.c</in>
+          <in>triplehuge.c</in>
+        </df>
+        <df name="triplemat">
+          <in>triplemat.c</in>
+        </df>
+        <df name="triplesort">
+          <in>triplesort.c</in>
+        </df>
+        <df name="userthreads">
+          <in>userthreads.c</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="bin/cat/cat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/cp/cp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/false/false.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/ln/ln.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/ls/ls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/mkdir/mkdir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/mv/mv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/pwd/pwd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/rm/rm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/rmdir/rmdir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/sh/sh.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/sync/sync.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bin/true/true.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/cache_mips1.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/dumbvm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/exception.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/interrupt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/lamebus_mips.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/pcb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/ram.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/spl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/start.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/switch.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/syscall.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/threadstart.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/tlb_mips1.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="kern/arch/mips/mips/trap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/asst1/catlock.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/asst1/catsem.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/asst1/stoplight.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/beep.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/console.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/pseudorand.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/pseudorand_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/random.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/generic/rtclock.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/init.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/beep_ltimer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/con_lscreen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/con_lser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/emu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/emu_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lamebus.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lhd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lhd_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lnet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lnet_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lrandom.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lrandom_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lscreen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lscreen_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/lser_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/ltimer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/ltimer_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/ltrace.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/ltrace_att.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/random_lrandom.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/dev/lamebus/rtclock_ltimer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/sfs/sfs_fs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/sfs/sfs_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/sfs/sfs_vnode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/device.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/devnull.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/vfscwd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/vfslist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/vfslookup.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/vfspath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/fs/vfs/vnode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/array.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/bitmap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/copyinout.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/kgets.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/kheap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/kprintf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/misc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/ntoh.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/lib/queue.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/main/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/main/menu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/arraytest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/bitmaptest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/fstest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/malloctest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/nettest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/queuetest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/synchtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/threadtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/test/tt3.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/thread/hardclock.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/thread/scheduler.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/thread/synch.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/thread/thread.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/userprog/loadelf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/userprog/runprogram.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/userprog/uio.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kern/vm/addrspace.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/crt0/mips-crt0.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/hostcompat/err.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/hostcompat/hostcompat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/hostcompat/time.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/__assert.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/__printf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/__puts.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/abort.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/atoi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/bzero.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/err.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/errno.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/exit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/getchar.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/getcwd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/malloc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/memcmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/memcpy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/memmove.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/memset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/mips-setjmp.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/libc/printf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/putchar.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/puts.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/random.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/snprintf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strcat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strchr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strcmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strcpy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strerror.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strlen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strrchr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strtok.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/strtok_r.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/syscalls-mips.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/libc/system.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libc/time.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/dumpsfs/dumpsfs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/halt/halt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/mksfs/disk.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/mksfs/mksfs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/mksfs/support.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/poweroff/poweroff.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sbin/reboot/reboot.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/add/add.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/argtest/argtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_chdir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_close.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_dup2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_execv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_fsync.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_ftruncate.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_getcwd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_getdirentry.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_ioctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_link.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_lseek.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_mkdir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_open.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_pipe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_read.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_readlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_reboot.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_remove.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_rename.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_rmdir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_sbrk.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_stat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_symlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_time.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_waitpid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/bad_write.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/common_buf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/common_fds.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/common_path.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/badcall/driver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/bigfile/bigfile.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/conman/conman.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/crash/crash.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/ctest/ctest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/dirconc/dirconc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/dirseek/dirseek.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/dirtest/dirtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/f_test/f_read.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/f_test/f_test.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/f_test/f_write.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/farm/farm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/faulter/faulter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/filetest/filetest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/forkbomb/forkbomb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/forkexecbomb/forkexecbomb.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="testbin/forktest/forktest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/guzzle/guzzle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/hash/hash.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/hog/hog.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/huge/huge.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/kitchen/kitchen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/malloctest/malloctest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/matmult/matmult-orig.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/matmult/matmult.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/palin/palin.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/parallelvm/parallelvm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/randcall/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/rmdirtest/rmdirtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/rmtest/rmtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/sink/sink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/sort/sort.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/stacktest/stacktest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/sty/sty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/tail/tail.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/tictac/tictac.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/triplehuge/triple.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/triplehuge/triplehuge.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/triplemat/triplemat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/triplesort/triplesort.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testbin/userthreads/userthreads.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

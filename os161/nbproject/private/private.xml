@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/vfs.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/vnode.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/arch/mips/mips/ram.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/compile/ASST0/Makefile</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/arch/mips/include/asmdefs.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/Makefile</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/lib.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/lib/kprintf.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/fs.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/fs/vfs/vfslist.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/main/main.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/conf/conf.kern</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/main/menu.c</file>
+        </group>
+    </open-files>
+</project-private>

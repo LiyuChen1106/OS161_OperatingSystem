@@ -1,0 +1,12 @@
+/usr/bin/make includes
+make[1]: Entering directory '/nfs/ug/homes-2/c/chenliy5/ECE344/os161'
+(cd kern && /usr/bin/make includes)
+make[2]: Entering directory '/nfs/ug/homes-2/c/chenliy5/ECE344/os161/kern'
+Makefile:6: ../defs.mk: No such file or directory
+make[2]: *** No rule to make target '../defs.mk'.  Stop.
+make[2]: Leaving directory '/nfs/ug/homes-2/c/chenliy5/ECE344/os161/kern'
+Makefile:45: recipe for target 'includes' failed
+make[1]: *** [includes] Error 2
+make[1]: Leaving directory '/nfs/ug/homes-2/c/chenliy5/ECE344/os161'
+Makefile:23: recipe for target 'all' failed
+make: *** [all] Error 2

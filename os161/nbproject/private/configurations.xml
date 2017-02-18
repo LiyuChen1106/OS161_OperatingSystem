@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+        <df name="cat">
+          <in>cat.c</in>
+        </df>
+        <df name="cp">
+          <in>cp.c</in>
+        </df>
+        <df name="false">
+          <in>false.c</in>
+        </df>
+        <df name="ln">
+          <in>ln.c</in>
+        </df>
+        <df name="ls">
+          <in>ls.c</in>
+        </df>
+        <df name="mkdir">
+          <in>mkdir.c</in>
+        </df>
+        <df name="mv">
+          <in>mv.c</in>
+        </df>
+        <df name="pwd">
+          <in>pwd.c</in>
+        </df>
+        <df name="rm">
+          <in>rm.c</in>
+        </df>
+        <df name="rmdir">
+          <in>rmdir.c</in>
+        </df>
+        <df name="sh">
+          <in>sh.c</in>
+        </df>
+        <df name="sync">
+          <in>sync.c</in>
+        </df>
+        <df name="true">
+          <in>true.c</in>
+        </df>
+      </df>
+      <df name="include">
+        <df name="sys">
+          <in>ioctl.h</in>
+          <in>reboot.h</in>
+          <in>stat.h</in>
+          <in>types.h</in>
+          <in>wait.h</in>
+        </df>
+        <in>assert.h</in>
+        <in>err.h</in>
+        <in>errno.h</in>
+        <in>fcntl.h</in>
+        <in>limits.h</in>
+        <in>setjmp.h</in>
+        <in>stdarg.h</in>
+        <in>stdio.h</in>
+        <in>stdlib.h</in>
+        <in>string.h</in>
+        <in>time.h</in>
+        <in>unistd.h</in>
+      </df>
+      <df name="kern">
+        <df name="arch">
+          <df name="mips">
+            <df name="conf">
+            </df>
+            <df name="include">
+              <in>asmdefs.h</in>
+              <in>bus.h</in>
+              <in>ktypes.h</in>
+              <in>pcb.h</in>
+              <in>setjmp.h</in>
+              <in>specialreg.h</in>
+              <in>spl.h</in>
+              <in>switchframe.h</in>
+              <in>tlb.h</in>
+              <in>trapframe.h</in>
+              <in>types.h</in>
+              <in>vm.h</in>
+            </df>
+            <df name="mips">
+              <in>cache_mips1.S</in>
+              <in>dumbvm.c</in>
+              <in>exception.S</in>
+              <in>interrupt.c</in>
+              <in>lamebus_mips.c</in>
+              <in>pcb.c</in>
+              <in>ram.c</in>
+              <in>spl.c</in>
+              <in>start.S</in>
+              <in>switch.S</in>
+              <in>syscall.c</in>
+              <in>threadstart.S</in>
+              <in>tlb_mips1.S</in>
+              <in>trap.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="asst1">
+          <in>catlock.c</in>
+          <in>catsem.c</in>
+          <in>stoplight.c</in>
+        </df>
+        <df name="compile">
+          <df name="ASST0">
+            <df name="machine">
+              <in>asmdefs.h</in>
+              <in>bus.h</in>
+              <in>ktypes.h</in>
+              <in>pcb.h</in>
+              <in>setjmp.h</in>
+              <in>specialreg.h</in>
+              <in>spl.h</in>
+              <in>switchframe.h</in>
+              <in>tlb.h</in>
+              <in>trapframe.h</in>
+              <in>types.h</in>
+              <in>vm.h</in>
+            </df>
+            <in>autoconf.c</in>
+            <in>autoconf.h</in>
+            <in>opt-dumbvm.h</in>
+            <in>opt-net.h</in>
+            <in>opt-netfs.h</in>
+            <in>opt-sfs.h</in>
+            <in>opt-synchprobs.h</in>
+            <in>vers.c</in>
+          </df>
+        </df>
+        <df name="conf">
+        </df>
+        <df name="dev">
+          <df name="generic">
+            <in>beep.c</in>
+            <in>beep.h</in>
+            <in>console.c</in>
+            <in>console.h</in>
+            <in>pseudorand.c</in>
+            <in>pseudorand.h</in>
+            <in>pseudorand_att.c</in>
+            <in>random.c</in>
+            <in>random.h</in>
+            <in>rtclock.c</in>
+            <in>rtclock.h</in>
+          </df>
+          <df name="lamebus">
+            <in>beep_ltimer.c</in>
+            <in>con_lscreen.c</in>
+            <in>con_lser.c</in>
+            <in>emu.c</in>
+            <in>emu.h</in>
+            <in>emu_att.c</in>
+            <in>lamebus.c</in>
+            <in>lamebus.h</in>
+            <in>lhd.c</in>
+            <in>lhd.h</in>
+            <in>lhd_att.c</in>
+            <in>lnet.c</in>
+            <in>lnet_att.c</in>
+            <in>lrandom.c</in>
+            <in>lrandom.h</in>
+            <in>lrandom_att.c</in>
+            <in>lscreen.c</in>
+            <in>lscreen.h</in>
+            <in>lscreen_att.c</in>
+            <in>lser.c</in>
+            <in>lser.h</in>
+            <in>lser_att.c</in>
+            <in>ltimer.c</in>
+            <in>ltimer.h</in>
+            <in>ltimer_att.c</in>
+            <in>ltrace.c</in>
+            <in>ltrace.h</in>
+            <in>ltrace_att.c</in>
+            <in>random_lrandom.c</in>
+            <in>rtclock_ltimer.c</in>
+          </df>
+          <in>init.c</in>
+        </df>
+        <df name="fs">
+          <df name="sfs">
+            <in>sfs_fs.c</in>
+            <in>sfs_io.c</in>
+            <in>sfs_vnode.c</in>
+          </df>
+          <df name="vfs">
+            <in>device.c</in>
+            <in>devnull.c</in>
+            <in>vfscwd.c</in>
+            <in>vfslist.c</in>
+            <in>vfslookup.c</in>
+            <in>vfspath.c</in>
+            <in>vnode.c</in>
+          </df>
+        </df>
+        <df name="include">
+          <df name="kern">
+            <in>callno.h</in>
+            <in>errmsg.h</in>
+            <in>errno.h</in>
+            <in>ioctl.h</in>
+            <in>limits.h</in>
+            <in>sfs.h</in>
+            <in>stat.h</in>
+            <in>types.h</in>
+            <in>unistd.h</in>
+          </df>
+          <in>addrspace.h</in>
+          <in>array.h</in>
+          <in>bitmap.h</in>
+          <in>clock.h</in>
+          <in>curthread.h</in>
+          <in>dev.h</in>
+          <in>elf.h</in>
+          <in>emufs.h</in>
+          <in>fs.h</in>
+          <in>lib.h</in>
+          <in>queue.h</in>
+          <in>scheduler.h</in>
+          <in>sfs.h</in>
+          <in>stdarg.h</in>
+          <in>synch.h</in>
+          <in>syscall.h</in>
+          <in>test.h</in>
+          <in>thread.h</in>
+          <in>types.h</in>
+          <in>uio.h</in>
+          <in>version.h</in>
+          <in>vfs.h</in>
+          <in>vm.h</in>
+          <in>vnode.h</in>
+        </df>
+        <df name="lib">
+          <in>array.c</in>
+          <in>bitmap.c</in>
+          <in>copyinout.c</in>
+          <in>kgets.c</in>
+          <in>kheap.c</in>
+          <in>kprintf.c</in>
+          <in>misc.c</in>
+          <in>ntoh.c</in>
+          <in>queue.c</in>
+        </df>
+        <df name="main">
+          <in>hello.c</in>
+          <in>main.c</in>
+          <in>menu.c</in>
+        </df>
+        <df name="test">
+          <in>arraytest.c</in>
+          <in>bitmaptest.c</in>
+          <in>fstest.c</in>
+          <in>malloctest.c</in>
+          <in>nettest.c</in>
+          <in>queuetest.c</in>
+          <in>synchtest.c</in>
+          <in>threadtest.c</in>
+          <in>tt3.c</in>
+        </df>
+        <df name="thread">
+          <in>hardclock.c</in>
+          <in>scheduler.c</in>
+          <in>synch.c</in>
+          <in>thread.c</in>
+        </df>
+        <df name="userprog">
+          <in>loadelf.c</in>
+          <in>runprogram.c</in>
+          <in>uio.c</in>
+        </df>
+        <df name="vm">
+          <in>addrspace.c</in>
+        </df>
+      </df>
+      <df name="lib">
+        <df name="crt0">
+          <in>mips-crt0.S</in>
+        </df>
+        <df name="hostcompat">
+          <in>err.c</in>
+          <in>host-err.h</in>
+          <in>hostcompat.c</in>
+          <in>hostcompat.h</in>
+          <in>time.c</in>
+        </df>
+        <df name="libc">
+          <in>__assert.c</in>
+          <in>__printf.c</in>
+          <in>__puts.c</in>
+          <in>abort.c</in>
+          <in>atoi.c</in>
+          <in>bzero.c</in>
+          <in>err.c</in>
+          <in>errno.c</in>
+          <in>exit.c</in>
+          <in>getchar.c</in>
+          <in>getcwd.c</in>
+          <in>malloc.c</in>
+          <in>memcmp.c</in>
+          <in>memcpy.c</in>
+          <in>memmove.c</in>
+          <in>memset.c</in>
+          <in>mips-setjmp.S</in>
+          <in>printf.c</in>
+          <in>putchar.c</in>
+          <in>puts.c</in>
+          <in>random.c</in>
+          <in>snprintf.c</in>
+          <in>strcat.c</in>
+          <in>strchr.c</in>
+          <in>strcmp.c</in>
+          <in>strcpy.c</in>
+          <in>strerror.c</in>
+          <in>strlen.c</in>
+          <in>strrchr.c</in>
+          <in>strtok.c</in>
+          <in>strtok_r.c</in>
+          <in>syscalls-mips.S</in>
+          <in>syscalls.S</in>
+          <in>system.c</in>
+          <in>time.c</in>
+        </df>
+      </df>
+      <df name="man">
+        <df name="bin">
+        </df>
+        <df name="dev">
+        </df>
+        <df name="libc">
+        </df>
+        <df name="misc">
+        </df>
+        <df name="sbin">
+        </df>
+        <df name="syscall">
+        </df>
+        <df name="testbin">
+        </df>
+        <df name="toplevel">
+        </df>
+      </df>
+      <df name="mk">
+      </df>
+      <df name="sbin">
+        <df name="dumpsfs">
+          <in>disk.c</in>
+          <in>disk.h</in>
+          <in>dumpsfs.c</in>
+          <in>support.c</in>
+          <in>support.h</in>
+        </df>
+        <df name="halt">
+          <in>halt.c</in>
+        </df>
+        <df name="mksfs">
+          <in>disk.c</in>
+          <in>disk.h</in>
+          <in>mksfs.c</in>
+          <in>support.c</in>
+          <in>support.h</in>
+        </df>
+        <df name="poweroff">
+          <in>poweroff.c</in>
+        </df>
+        <df name="reboot">
+          <in>reboot.c</in>
+        </df>
+      </df>
+      <df name="testbin">
+        <df name="add">
+          <in>add.c</in>
+        </df>
+        <df name="argtest">
+          <in>argtest.c</in>
+        </df>
+        <df name="badcall">
+          <in>bad_chdir.c</in>
+          <in>bad_close.c</in>
+          <in>bad_dup2.c</in>
+          <in>bad_execv.c</in>
+          <in>bad_fsync.c</in>
+          <in>bad_ftruncate.c</in>
+          <in>bad_getcwd.c</in>
+          <in>bad_getdirentry.c</in>
+          <in>bad_ioctl.c</in>
+          <in>bad_link.c</in>
+          <in>bad_lseek.c</in>
+          <in>bad_mkdir.c</in>
+          <in>bad_open.c</in>
+          <in>bad_pipe.c</in>
+          <in>bad_read.c</in>
+          <in>bad_readlink.c</in>
+          <in>bad_reboot.c</in>
+          <in>bad_remove.c</in>
+          <in>bad_rename.c</in>
+          <in>bad_rmdir.c</in>
+          <in>bad_sbrk.c</in>
+          <in>bad_stat.c</in>
+          <in>bad_symlink.c</in>
+          <in>bad_time.c</in>
+          <in>bad_waitpid.c</in>
+          <in>bad_write.c</in>
+          <in>common_buf.c</in>
+          <in>common_fds.c</in>
+          <in>common_path.c</in>
+          <in>config.h</in>
+          <in>driver.c</in>
+          <in>test.h</in>
+        </df>
+        <df name="bigfile">
+          <in>bigfile.c</in>
+        </df>
+        <df name="conman">
+          <in>conman.c</in>
+        </df>
+        <df name="crash">
+          <in>crash.c</in>
+        </df>
+        <df name="ctest">
+          <in>ctest.c</in>
+        </df>
+        <df name="dirconc">
+          <in>dirconc.c</in>
+        </df>
+        <df name="dirseek">
+          <in>dirseek.c</in>
+        </df>
+        <df name="dirtest">
+          <in>dirtest.c</in>
+        </df>
+        <df name="f_test">
+          <in>f_hdr.h</in>
+          <in>f_read.c</in>
+          <in>f_test.c</in>
+          <in>f_write.c</in>
+        </df>
+        <df name="farm">
+          <in>farm.c</in>
+        </df>
+        <df name="faulter">
+          <in>faulter.c</in>
+        </df>
+        <df name="filetest">
+          <in>filetest.c</in>
+        </df>
+        <df name="forkbomb">
+          <in>forkbomb.c</in>
+        </df>
+        <df name="forkexecbomb">
+          <in>forkexecbomb.c</in>
+        </df>
+        <df name="forktest">
+          <in>forktest.c</in>
+        </df>
+        <df name="guzzle">
+          <in>guzzle.c</in>
+        </df>
+        <df name="hash">
+          <in>hash.c</in>
+        </df>
+        <df name="hog">
+          <in>hog.c</in>
+        </df>
+        <df name="huge">
+          <in>huge.c</in>
+        </df>
+        <df name="kitchen">
+          <in>kitchen.c</in>
+        </df>
+        <df name="malloctest">
+          <in>malloctest.c</in>
+        </df>
+        <df name="matmult">
+          <in>matmult-orig.c</in>
+          <in>matmult.c</in>
+        </df>
+        <df name="palin">
+          <in>palin.c</in>
+        </df>
+        <df name="parallelvm">
+          <in>parallelvm.c</in>
+        </df>
+        <df name="randcall">
+          <in>calls.c</in>
+          <in>extern.h</in>
+          <in>main.c</in>
+        </df>
+        <df name="rmdirtest">
+          <in>rmdirtest.c</in>
+        </df>
+        <df name="rmtest">
+          <in>rmtest.c</in>
+        </df>
+        <df name="sink">
+          <in>sink.c</in>
+        </df>
+        <df name="sort">
+          <in>sort.c</in>
+        </df>
+        <df name="stacktest">
+          <in>stacktest.c</in>
+        </df>
+        <df name="sty">
+          <in>sty.c</in>
+        </df>
+        <df name="tail">
+          <in>tail.c</in>
+        </df>
+        <df name="tictac">
+          <in>tictac.c</in>
+        </df>
+        <df name="triplehuge">
+          <in>triple.c</in>
+          <in>triple.h</in>
+          <in>triplehuge.c</in>
+        </df>
+        <df name="triplemat">
+          <in>triple.c</in>
+          <in>triple.h</in>
+          <in>triplemat.c</in>
+        </df>
+        <df name="triplesort">
+          <in>triple.c</in>
+          <in>triple.h</in>
+          <in>triplesort.c</in>
+        </df>
+        <df name="userthreads">
+          <in>userthreads.c</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

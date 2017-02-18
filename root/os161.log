@@ -1,0 +1,130 @@
+sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system version 0 (ASST0 #21)
+
+Cpu is MIPS r2000/r3000
+348k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system version 0 (ASST0 #21)
+
+Cpu is MIPS r2000/r3000
+348k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: ?o
+?o
+
+OS/161 operations menu
+    [s]       Shell                     [pf]      Print a file              
+    [p]       Other program             [cd]      Change directory          
+    [dbflags] Debug flags               [pwd]     Print current directory   
+    [mount]   Mount a filesystem        [sync]    Sync filesystems          
+    [unmount] Unmount a filesystem      [panic]   Intentional panic         
+    [bootfs]  Set "boot" filesystem     [q]       Quit and shut down        
+
+Operation took 0.059526920 seconds
+OS/161 kernel [? for menu]: dbflags
+dbflags
+
+OS/161 Debug flags
+    [df 1 on/off]        DB_LOCORE      [df 7 on/off]        DB_EXEC     
+    [df 2 on/off]        DB_SYSCALL     [df 8 on/off]        DB_VFS      
+    [df 3 on/off]        DB_INTERRUPT   [df 9 on/off]        DB_SFS      
+    [df 4 on/off]        DB_DEVICE      [df 10 on/off]       DB_NET      
+    [df 5 on/off]        DB_THREADS     [df 11 on/off]       DB_NETFS    
+    [df 6 on/off]        DB_VM          [df 12 on/off]       DB_KMALLOC  
+
+Current value of dbflags is 0x0
+Operation took 0.060809520 seconds
+OS/161 kernel [? for menu]: df 1 on
+df 1 on
+Operation took 0.000032200 seconds
+OS/161 kernel [? for menu]: dbflags
+dbflags
+
+OS/161 Debug flags
+    [df 1 on/off]        DB_LOCORE      [df 7 on/off]        DB_EXEC     
+    [df 2 on/off]        DB_SYSCALL     [df 8 on/off]        DB_VFS      
+    [df 3 on/off]        DB_INTERRUPT   [df 9 on/off]        DB_SFS      
+    [df 4 on/off]        DB_DEVICE      [df 10 on/off]       DB_NET      
+    [df 5 on/off]        DB_THREADS     [df 11 on/off]       DB_NETFS    
+    [df 6 on/off]        DB_VM          [df 12 on/off]       DB_KMALLOC  
+
+Current value of dbflags is 0x1
+Operation took 0.060846640 seconds
+OS/161 kernel [? for menu]: df 1 off
+df 1 off
+Operation took 0.000042120 seconds
+OS/161 kernel [? for menu]: dbflags
+dbflags
+
+OS/161 Debug flags
+    [df 1 on/off]        DB_LOCORE      [df 7 on/off]        DB_EXEC     
+    [df 2 on/off]        DB_SYSCALL     [df 8 on/off]        DB_VFS      
+    [df 3 on/off]        DB_INTERRUPT   [df 9 on/off]        DB_SFS      
+    [df 4 on/off]        DB_DEVICE      [df 10 on/off]       DB_NET      
+    [df 5 on/off]        DB_THREADS     [df 11 on/off]       DB_NETFS    
+    [df 6 on/off]        DB_VM          [df 12 on/off]       DB_KMALLOC  
+
+Current value of dbflags is 0x0
+Operation took 0.060780160 seconds
+OS/161 kernel [? for menu]: df 5 on
+df 5 on
+Operation took 0.000037960 seconds
+OS/161 kernel [? for menu]: dbflags
+dbflags
+
+OS/161 Debug flags
+    [df 1 on/off]        DB_LOCORE      [df 7 on/off]        DB_EXEC     
+    [df 2 on/off]        DB_SYSCALL     [df 8 on/off]        DB_VFS      
+    [df 3 on/off]        DB_INTERRUPT   [df 9 on/off]        DB_SFS      
+    [df 4 on/off]        DB_DEVICE      [df 10 on/off]       DB_NET      
+    [df 5 on/off]        DB_THREADS     [df 11 on/off]       DB_NETFS    
+    [df 6 on/off]        DB_VM          [df 12 on/off]       DB_KMALLOC  
+
+Current value of dbflags is 0x10
+Operation took 0.060794400 seconds
+OS/161 kernel [? for menu]: df 13 on
+df 13 on
+Usage: df nr on/off
