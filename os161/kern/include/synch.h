@@ -5,6 +5,8 @@
 #ifndef _SYNCH_H_
 #define _SYNCH_H_
 
+#include <thread.h>
+
 /*
  * Dijkstra-style semaphore.
  * Operations:
@@ -51,6 +53,8 @@ void              sem_destroy(struct semaphore *);
 struct lock {
 	char *name;
 	// add what you need here
+    volatile int held;
+    volatile struct thread *holder;
 	// (don't forget to mark things volatile as needed)
 };
 

@@ -18,7 +18,7 @@
 #include <lib.h>
 #include <test.h>
 #include <thread.h>
-
+#include <synch.h>
 
 /*
  * 
@@ -44,6 +44,47 @@
 
 #define NMICE 2
 
+/*
+ * 
+ * Global variables
+ *
+ */
+
+/*
+ * Number of cats eating.
+ */
+
+int catsCount = 0;
+
+/*
+ * Number of mice eating.
+ */
+
+int miceCount = 0;
+
+/*
+ * Availability of dish 1.
+ */
+
+int dish1Avail = 1;
+
+/*
+ * Availability of dish 2.
+ */
+
+int dish2Avail = 1;
+
+/*
+ * Exclusive cat or mice.
+ */
+
+struct semaphore *cats_or_mice; 
+
+/*
+ * Mutex for the dishes.
+ */
+
+struct semaphore *mutex; 
 
 /*
  * 
@@ -88,6 +129,69 @@ catsem(void * unusedpointer,
 
         (void) unusedpointer;
         (void) catnumber;
+
+	
+	int iteration = 0;
+	int bowl;
+
+	// each cat has to eat four times
+	while (iteration < 4) {
+
+		P(mutex);
+		// check if bowls are available
+		if(!dish1Avail && !dish2Avail){
+			V(mutex);
+			continue;
+		}
+		
+		// cats can start coming in when no mouse is eating
+		if (miceCount > 0) {
+			V(mutex);
+			continue;
+		}
+
+		// increase the number of cats
+		catsCount++;
+		if(catsCount == 1)
+			P(cats_or_mice);
+
+		// eat either dish1 or dish2
+		if (dish1Avail) {
+
+			bowl = 1;
+			dish1Avail = 0;
+		}		
+		else if (dish2Avail) {
+
+			bowl = 2;
+			dish2Avail = 0;
+		}
+		V(mutex);
+			
+		//start printing eating messages
+		sem_eat("cat", catnumber, bowl, iteration);
+		iteration++;
+
+		// end a round of eating
+		P(mutex);
+		// decrease the number of cats
+		catsCount--;
+		if (catsCount == 0)
+			V(cats_or_mice);
+
+		//free bowls
+		if (bowl == 1) {
+
+			dish1Avail = 1;
+		}
+		else if (bowl == 2) {
+
+			dish2Avail = 1;
+		}
+		V(mutex);	
+	}		
+		
+
 }
         
 
@@ -118,6 +222,69 @@ mousesem(void * unusedpointer,
 
         (void) unusedpointer;
         (void) mousenumber;
+
+
+	
+	int iteration = 0;
+	int bowl;
+
+	// each mouse has to eat four times
+	while (iteration < 4) {
+
+		P(mutex);
+		// check if bowls are available
+		if(!dish1Avail && !dish2Avail){
+			V(mutex);
+			continue;
+		}
+		
+		// mice can start coming in when no cat is eating
+		if (catsCount > 0) {
+			V(mutex);
+			continue;
+		}
+
+		// increase the number of mice
+		miceCount++;
+		if(miceCount == 1)
+			P(cats_or_mice);
+
+		// eat either dish1 or dish2
+		if (dish1Avail) {
+
+			bowl = 1;
+			dish1Avail = 0;
+		}		
+		else if (dish2Avail) {
+
+			bowl = 2;
+			dish2Avail = 0;
+		}
+		V(mutex);
+			
+		//start printing eating messages
+		sem_eat("mouse", mousenumber, bowl, iteration);
+		iteration++;
+
+		// end a round of eating
+		P(mutex);
+		// decrease the number of mice
+		miceCount--;
+		if (miceCount == 0)
+			V(cats_or_mice);
+
+		//free bowls
+		if (bowl == 1) {
+
+			dish1Avail = 1;
+		}
+		else if (bowl == 2) {
+
+			dish2Avail = 1;
+		}
+		V(mutex);	
+	}	
+
 }
 
 
@@ -148,6 +315,15 @@ catmousesem(int nargs,
 
         (void) nargs;
         (void) args;
+
+	cats_or_mice = sem_create("cats_or_mice",1);
+	mutex = sem_create("mutex",1);
+
+
+
+
+
+
    
         /*
          * Start NCATS catsem() threads.
@@ -198,6 +374,9 @@ catmousesem(int nargs,
                               );
                 }
         }
+
+	//sem_destroy(cats_or_mice);
+	//sem_destroy(mutex);
 
         return 0;
 }

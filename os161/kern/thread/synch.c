@@ -115,6 +115,8 @@ lock_create(const char *name)
 	}
 	
 	// add stuff here as needed
+	lock->held = 0;
+	lock->holder = NULL;
 	
 	return lock;
 }
@@ -122,38 +124,56 @@ lock_create(const char *name)
 void
 lock_destroy(struct lock *lock)
 {
+    int spl;
 	assert(lock != NULL);
 
+	spl = splhigh();
 	// add stuff here as needed
 	
 	kfree(lock->name);
+	kfree(lock->holder);
 	kfree(lock);
+	splx(spl);
 }
 
 void
 lock_acquire(struct lock *lock)
 {
-	// Write this
-
-	(void)lock;  // suppress warning until code gets written
+    int spl;
+	assert(lock != NULL);
+	
+	// Disable interrupt
+	spl = splhigh();
+	while(lock->held != 0){
+		spl = spl0();
+		thread_yield();
+		spl = splhigh();
+	}
+	
+	//spl = splhigh();
+	lock->held = 1;
+	lock->holder = curthread;
+	splx(spl);
 }
 
 void
 lock_release(struct lock *lock)
 {
-	// Write this
-
-	(void)lock;  // suppress warning until code gets written
+	int spl;
+	assert(lock != NULL);
+	
+	// Disable interrupt
+	spl = splhigh();
+	lock->held = 0;
+	lock->holder = NULL;
+	thread_yield();
+	splx(spl);
 }
 
 int
 lock_do_i_hold(struct lock *lock)
 {
-	// Write this
-
-	(void)lock;  // suppress warning until code gets written
-
-	return 1;    // dummy until code gets written
+	return (lock->holder = curthread);    
 }
 
 ////////////////////////////////////////////////////////////
