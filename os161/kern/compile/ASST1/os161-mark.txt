@@ -1,0 +1,4 @@
+lock, 10, 0
+condition variable, 10, 0
+cat/mouse using locks, 25, 0
+stoplight, 50, 0

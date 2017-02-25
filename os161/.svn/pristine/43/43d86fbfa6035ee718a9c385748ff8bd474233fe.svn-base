@@ -1,0 +1,7 @@
+
+/*
+ * My first function
+ */
+void hello(){
+    kprintf("Hello World\n");
+}
