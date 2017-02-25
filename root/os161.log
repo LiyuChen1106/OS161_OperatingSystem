@@ -1,0 +1,690 @@
+sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.
+sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy2
+sy2
+Starting lock test...
+Lock test done.sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: sy3
+sy3
+Starting CV test...
+Threads should print out in reverse order.
+Thread 31
+Thread 30
+Thread 29
+Thread 28
+Thread 27
+Thread 26
+Thread 25
+Thread 24
+Thread 23
+Thread 22
+Thread 21
+Thread 20
+Thread 19
+Thread 18
+Thread 17
+Thread 16
+Thread 15
+Thread 14
+Thread 13
+Thread 12
+Thread 11
+Thread 10
+Thread 9
+Thread 8
+Thread 7
+Thread 6
+Thread 5
+Thread 4
+Thread 3
+Thread 2
+Thread 1
+Thread 0
+Thread 31
+Thread 30
+Thread 29
+Thread 28
+Thread 27
+Thread 26
+Thread 25
+Thread 24
+Thread 23
+Thread 22
+Thread 21
+Thread 20
+Thread 19
+Thread 18
+Thread 17
+Thread 16
+Thread 15
+Thread 14
+Thread 13
+Thread 12
+Thread 11
+Thread 10
+Thread 9
+Thread 8
+Thread 7
+Thread 6
+Thread 5
+Thread 4
+Thread 3
+Thread 2
+Thread 1
+Thread 0
+Thread 31
+Thread 30
+Thread 29
+Thread 28
+Thread 27
+Thread 26
+Thread 25
+Thread 24
+Thread 23
+Thread 22
+Thread 21
+Thread 20
+Thread 19
+Thread 18
+Thread 17
+Thread 16
+Thread 15
+Thread 14
+Thread 13
+Thread 12
+Thread 11
+Thread 10
+Thread 9
+Thread 8
+Thread 7
+Thread 6
+Thread 5
+Thread 4
+Thread 3
+Thread 2
+Thread 1
+Thread 0
+Thread 31
+Thread 30
+Thread 29
+Thread 28
+Thread 27
+Thread 26
+Thread 25
+Thread 24
+Thread 23
+Thread 22
+Thread 21
+Thread 20
+Thread 19
+Thread 18
+Thread 17
+Thread 16
+Thread 15
+Thread 14
+Thread 13
+Thread 12
+Thread 11
+Thread 10
+Thread 9
+Thread 8
+Thread 7
+Thread 6
+Thread 5
+Thread 4
+Thread 3
+Thread 2
+Thread 1
+Thread 0
+Thread 31
+Thread 30
+Thread 29
+Thread 28
+Thread 27
+Thread 26
+Thread 25
+Thread 24
+Thread 23
+Thread 22
+Thread 21
+Thread 20
+Thread 19
+Thread 18
+Thread 17
+Thread 16
+Thread 15
+Thread 14
+Thread 13
+Thread 12
+Thread 11
+Thread 10
+Thread 9
+Thread 8
+Thread 7
+Thread 6
+Thread 5
+Thread 4
+Thread 3
+Thread 2
+Thread 1
+Thread 0
+CV test done
+Operation took sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: 1a
+1a
+cat: 0 starts eating: bowl 1, iteration 0
+Operation took 0.053761960 seconds
+cat: 3 starts eating: bowl 2, iteration 0
+OS/161 kernel [? for menu]: cat: 0 ends eating: bowl 1, iteration 0
+cat: 3 ends eating: bowl 2, iteration 0
+cat: 0 starts eating: bowl 1, iteration 1
+cat: 3 starts eating: bowl 2, iteration 1
+cat: 0 ends eating: bowl 1, iteration 1
+cat: 3 ends eating: bowl 2, iteration 1
+cat: 0 starts eating: bowl 1, iteration 2
+cat: 3 starts eating: bowl 2, iteration 2
+cat: 0 ends eating: bowl 1, iteration 2
+cat: 3 ends eating: bowl 2, iteration 2
+cat: 0 starts eating: bowl 1, iteration 3
+cat: 3 starts eating: bowl 2, iteration 3
+cat: 0 ends eating: bowl 1, iteration 3
+cat: 3 ends eating: bowl 2, iteration 3
+cat: 5 starts eating: bowl 1, iteration 0
+cat: 2 starts eating: bowl 2, iteration 0
+cat: 5 ends eating: bowl 1, iteration 0
+cat: 2 ends eating: bowl 2, iteration 0
+cat: 4 starts eating: bowl 1, iteration 0
+cat: 1 starts eating: bowl 2, iteration 0
+cat: 1 ends eating: bowl 2, iteration 0
+cat: 4 ends eating: bowl 1, iteration 0
+cat: 1 starts eating: bowl 2, iteration 1
+cat: 5 starts eating: bowl 1, iteration 1
+cat: 5 ends eating: bowl 1, iteration 1
+cat: 1 ends eating: bowl 2, iteration 1
+cat: 4 starts eating: bowl 1, iteration 1
+cat: 1 starts eating: bowl 2, iteration 2
+cat: 1 ends eating: bowl 2, iteration 2
+cat: 4 ends eating: bowl 1, iteration 1
+cat: 1 starts eating: bowl 2, iteration 3
+cat: 5 starts eating: bowl 1, iteration 2
+cat: 5 ends eating: bowl 1, iteration 2
+cat: 1 ends eating: bowl 2, iteration 3
+cat: 5 starts eating: bowl 1, iteration 3
+cat: 2 starts eating: bowl 2, iteration 1
+cat: 5 ends eating: bowl 1, iteration 3
+cat: 2 ends eating: bowl 2, iteration 1
+cat: 4 starts eating: bowl 1, iteration 2
+cat: 2 starts eating: bowl 2, iteration 2
+cat: 4 ends eating: bowl 1, iteration 2
+cat: 2 ends eating: bowl 2, iteration 2
+cat: 4 starts eating: bowl 1, iteration 3
+cat: 2 starts eating: bowl 2, iteration 3
+cat: 4 ends eating: bowl 1, iteration 3
+cat: 2 ends eating: bowl 2, iteration 3
+mouse: 1 starts eating: bowl 2, iteration 0
+mouse: 0 starts eating: bowl 1, iteration 0
+mouse: 0 ends eating: bowl 1, iteration 0
+mouse: 1 ends eating: bowl 2, iteration 0
+mouse: 0 starts eating: bowl 1, iteration 1
+mouse: 1 starts eating: bowl 2, iteration 1
+mouse: 1 ends eating: bowl 2, iteration 1
+mouse: 0 ends eating: bowl 1, iteration 1
+mouse: 1 starts eating: bowl 2, iteration 2
+mouse: 0 starts eating: bowl 1, iteration 2
+mouse: 0 ends eating: bowl 1, iteration 2
+mouse: 1 ends eating: bowl 2, iteration 2
+mouse: 0 starts eating: bowl 1, iteration 3
+mouse: 1 starts eating: bowl 2, iteration 3
+mouse: 1 ends eating: bowl 2, iteration 3
+mouse: 0 ends eating: bowl 1, iteration 3sys161: System/161 release 1.14, compiled Jan 13 2015 13:55:47
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+group os-017 system chickchick version 0 (ASST1 #14)
+
+Cpu is MIPS r2000/r3000
+1876k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (10000 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: 1c
+1c
+approaching: car =  0, direction = E, destination = W
+region1:     car =  0, direction = E, destination = W
+approaching: car =  1, direction = S, destination = E
+region2:     car =  0, direction = E, destination = W
+region1:     car =  1, direction = S, destination = E
+approaching: car =  2, direction = N, destination = W
+leaving:     car =  0, direction = E, destination = W
+Operation took 0.286065920 seconds
+leaving:     car =  1, direction = S, destination = E
+region1:     car =  2, direction = N, destination = W
+approaching: car =  4, direction = E, destination = N
+OS/161 kernel [? for menu]: approaching: car =  3, direction = N, destination = S
+leaving:     car =  2, direction = N, destination = W
+region1:     car =  4, direction = E, destination = N
+approaching: car = 10, direction = S, destination = N
+region1:     car =  3, direction = N, destination = S
+leaving:     car =  4, direction = E, destination = N
+region1:     car = 10, direction = S, destination = N
+region2:     car =  3, direction = N, destination = S
+approaching: car =  9, direction = E, destination = N
+region2:     car = 10, direction = S, destination = N
+leaving:     car =  3, direction = N, destination = S
+leaving:     car = 10, direction = S, destination = N
+approaching: car = 11, direction = E, destination = W
+region1:     car =  9, direction = E, destination = N
+approaching: car = 15, direction = W, destination = N
+leaving:     car =  9, direction = E, destination = N
+region1:     car = 15, direction = W, destination = N
+region1:     car = 11, direction = E, destination = W
+approaching: car =  5, direction = E, destination = S
+region2:     car = 15, direction = W, destination = N
+region2:     car = 11, direction = E, destination = W
+region1:     car =  5, direction = E, destination = S
+leaving:     car = 11, direction = E, destination = W
+region2:     car =  5, direction = E, destination = S
+approaching: car = 19, direction = S, destination = E
+region3:     car = 15, direction = W, destination = N
+region3:     car =  5, direction = E, destination = S
+region1:     car = 19, direction = S, destination = E
+leaving:     car = 15, direction = W, destination = N
+leaving:     car =  5, direction = E, destination = S
+leaving:     car = 19, direction = S, destination = E
+approaching: car = 16, direction = W, destination = E
+approaching: car =  8, direction = W, destination = E
+approaching: car = 14, direction = S, destination = N
+region1:     car = 16, direction = W, destination = E
+region1:     car = 14, direction = S, destination = N
+region2:     car = 14, direction = S, destination = N
+leaving:     car = 14, direction = S, destination = N
+region2:     car = 16, direction = W, destination = E
+approaching: car =  6, direction = N, destination = S
+region1:     car =  8, direction = W, destination = E
+leaving:     car = 16, direction = W, destination = E
+region1:     car =  6, direction = N, destination = S
+region2:     car =  8, direction = W, destination = E
+approaching: car = 12, direction = S, destination = E
+region2:     car =  6, direction = N, destination = S
+leaving:     car =  8, direction = W, destination = E
+leaving:     car =  6, direction = N, destination = S
+region1:     car = 12, direction = S, destination = E
+approaching: car =  7, direction = N, destination = W
+approaching: car = 13, direction = S, destination = E
+leaving:     car = 12, direction = S, destination = E
+region1:     car =  7, direction = N, destination = W
+region1:     car = 13, direction = S, destination = E
+approaching: car = 17, direction = E, destination = S
+leaving:     car =  7, direction = N, destination = W
+leaving:     car = 13, direction = S, destination = E
+region1:     car = 17, direction = E, destination = S
+approaching: car = 18, direction = W, destination = S
+region2:     car = 17, direction = E, destination = S
+region1:     car = 18, direction = W, destination = S
+leaving:     car = 18, direction = W, destination = S
+region3:     car = 17, direction = E, destination = S
+leaving:     car = 17, direction = E, destination = S
