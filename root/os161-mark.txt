@@ -1,0 +1,4 @@
+lock, 10, 10
+condition variable, 10, 10
+cat/mouse using semaphores, 25, 25
+stoplight, 50, 50
