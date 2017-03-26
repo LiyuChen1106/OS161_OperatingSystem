@@ -1,0 +1,34 @@
+#ifndef _SYSCALL_H_
+#define _SYSCALL_H_
+
+/*
+ * Prototypes for IN-KERNEL entry points for system call implementations.
+ */
+//reboot does not return on success
+int sys_reboot(int code);
+
+int sys_write(struct trapframe *tf, int *retval);
+int sys_read(struct trapframe *tf, int *retval);
+
+int sys_fork(struct trapframe *tf, int *retval);
+int md_forkentry(struct trapframe *tf, unsigned long vmspace);
+int sys_getpid(struct trapframe *tf, int *retval);
+int sys_waitpid(struct trapframe *tf, int *retval);
+int sys__exit(struct trapframe *tf, int *retval);
+
+int sys_execv(struct trapframe *tf, int *retval);
+//added other syscall
+//int sys_write(int fd, const void *buf, size_t nbytes, int32_t *retval);
+//int sys_read(int fd, void *buf, size_t buflen, int32_t *retval);
+//pid_t sys_fork(void);
+//int sys_fork(int32_t *retval);
+//pid_t sys_getpid(void); //never fail, err = 0 always
+//int sys_getpid(int32_t *retval);
+//pid_t sys_waitpid(pid_t pid, int *status, int options);
+//int sys_waitpid(pid_t pid, int *status, int options, int32_t *retval);
+//void sys__exit(int exitcode); //exit does not return
+//int sys__exit(int exitcode); //???->how to implement
+//execv does not return on success
+//int execv(const char *program, char **args);
+
+#endif /* _SYSCALL_H_ */

@@ -10,19 +10,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/vfs.h</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/vnode.h</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/arch/mips/mips/ram.c</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/compile/ASST0/Makefile</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/arch/mips/include/asmdefs.h</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/Makefile</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/lib.h</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/lib/kprintf.c</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/fs.h</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/fs/vfs/vfslist.c</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/main/main.c</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/conf/conf.kern</file>
-            <file>file:/homes/c/chenliy5/ECE344/os161/kern/main/menu.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/thread.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/lib/bitmap.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/array.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/lib/array.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/test/queuetest.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/lib/queue.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/testbin/badcall/bad_execv.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/thread/scheduler.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/lib/libc/syscalls.S</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/bin/cat/cat.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/lib/libc/abort.c</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/queue.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/include/unistd.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/bitmap.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/kern/unistd.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/testbin/badcall/config.h</file>
+            <file>file:/homes/c/chenliy5/ECE344/os161/kern/include/curthread.h</file>
         </group>
     </open-files>
 </project-private>

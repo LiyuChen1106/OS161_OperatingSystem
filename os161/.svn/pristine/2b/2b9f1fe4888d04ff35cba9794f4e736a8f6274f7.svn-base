@@ -1,0 +1,513 @@
+#include <types.h>
+#include <kern/errno.h>
+#include <lib.h>
+#include <machine/pcb.h>
+#include <machine/spl.h>
+#include <machine/trapframe.h>
+#include <kern/callno.h>
+#include <syscall.h>
+#include <kern/unistd.h>
+#include <thread.h>
+#include <curthread.h>
+#include <addrspace.h>
+#include <vm.h>
+#include <lib.h>
+#include <queue.h>
+#include <synch.h>
+
+#define PATH_MAX   1024
+
+/*
+ * fork
+ * Kernel level code: copy the address space and the trap frame 
+ *
+ */
+int sys_fork(struct trapframe *tf, int *retval) {
+
+    struct thread* child;
+    struct addrspace* child_as;
+
+    // create the new address space and frame for the child process
+    int return_value = as_copy(curthread -> t_vmspace, &child_as);
+    if (return_value) {
+
+        return ENOMEM;
+    }
+
+    // copy the trap frame from the parent process to the child process
+    struct trapframe *child_frame = kmalloc(sizeof (struct trapframe));
+    if (child_frame == NULL) {
+
+        return ENOMEM;
+    }
+
+    memcpy(child_frame, tf, sizeof (struct trapframe));
+    //*child_frame = *tf; 
+
+    assert(curthread -> t_vmspace != NULL);
+
+
+    return_value = thread_fork(curthread->t_name, (void*) child_frame,
+            (unsigned long) child_as, md_forkentry, &child);
+
+    if (return_value) {
+        kfree(child_frame);
+        as_destroy(child_as);
+
+        return ENOMEM;
+    }
+
+    *retval = child->t_pid;
+    return 0;
+}
+
+/*
+ * User level code for fork
+ */
+int md_forkentry(struct trapframe *tf, unsigned long vmspace) {
+
+    // make a local trapframe
+    struct trapframe child_frame;
+    // use the same address space as parent
+    struct addrspace *child_addrspace = (struct addrspace*) vmspace;
+
+
+    memcpy(&child_frame, tf, sizeof (struct trapframe));
+
+    assert(curthread->t_vmspace == NULL);
+    curthread->t_vmspace = child_addrspace;
+    as_activate(curthread->t_vmspace);
+
+    // change the register values
+    child_frame.tf_v0 = 0;
+    child_frame.tf_a3 = 0;
+    child_frame.tf_epc += 4;
+
+
+    mips_usermode(&child_frame);
+    return 0;
+
+}
+
+/*
+ * Getpid returns the process id of the current process.
+ */
+int sys_getpid(struct trapframe *tf, int *retval) {
+
+    *retval = curthread->t_pid;
+    return 0;
+
+}
+
+/*
+ * This function implement the following user level function:
+ * pid_t waitpid(pid_t pid, int *status, int options);
+ * It makes the current thread wait for the thread, specified by the 
+ * pid being passed in, returning its exit code in the integer pointed to 
+ * by status. 
+ */
+int sys_waitpid(struct trapframe *tf, int *retval) {
+
+    pid_t pid = tf->tf_a0;
+    int *status = (int *) tf->tf_a1;
+    int options = tf->tf_a2;
+
+
+
+    // check if the parameters are valid
+    if (options != 0) {
+
+        return EINVAL;
+    }
+
+    if (status == NULL) {
+
+        return EFAULT;
+    }
+
+    if (pid < 0 || pid > MAX_PID) {
+
+        return EINVAL;
+    }
+
+    // Variable for looping through the running threads
+    int i;
+    struct thread * check_thread;
+
+    // find the thread that the current thread is waiting for
+    P(arr_lock);
+    check_thread = active_threads[pid];
+
+    if(check_thread == NULL){
+
+	V(arr_lock);
+	return EINVAL;
+    }
+    V(arr_lock);
+
+    // if the parent id is not matched-> what should be the return value????
+    if(check_thread->t_ppid != curthread->t_pid){
+
+	return EINVAL;
+    }
+//    for (i = 0; i < MAX_PID; i++) {
+//        check_thread = active_threads[i];
+//	if(check_thread == NULL)
+//		continue;
+//        if (check_thread->t_pid == pid) {
+//	    V(arr_lock);
+//            break;
+//        }
+//    }
+
+    // pid is not found in the running queue
+    //    if (i == MAX_PID) {
+    //	V(arr_lock);
+    //        *retval = EINVAL;
+    //        return -1;
+    //    }
+
+    // if anyone has already been in the waitlist
+    int spl = splhigh();
+    if(thread_hassleepers(check_thread->t_waitsem)){
+
+	splx(spl);
+	return EINVAL;
+    }
+
+    splx(spl);
+
+
+    // the thread has not exited
+    if (!check_thread-> t_exit) {
+	    
+        P(check_thread->t_waitsem);
+    } //else{
+	//*retval = pid;
+	//	return 0;
+    //}
+    
+    //int result = copyout(exitcode_table[check_thread->t_pid], (userptr_t) status, sizeof (int));
+    *status = exitcode_table[check_thread->t_pid];
+	// remove from array
+	active_threads[pid] = NULL;
+    //while(active_threads[pid])
+//	    thread_yield();
+
+    int result = copyout(check_thread->t_exitcode, (int *) status, sizeof (check_thread->t_exitcode));
+
+    //*status = check_thread->t_exitcode;
+
+    //if (result) {
+	    
+      //  return EFAULT;
+    //}
+
+
+    // return the exited pid in case of success
+    *retval = pid;
+    return 0;
+
+}
+
+/*
+ * This function implement the following user level function:
+ * void _exit(int exitcode);
+ * It causes the current process to exit.
+ */
+int sys__exit(struct trapframe *tf, int *retval) {
+
+    int exit_code = tf->tf_a0;
+    //kprintf("thread %d 's exit code is now %d \n", curthread->t_pid, curthread->t_exitcode);
+    //kprintf("thread %d 's exit code will be %d \n", curthread->t_pid, exit_code);
+
+    // Variable for looping through the running threads
+//    int index;
+//    struct thread * child_thread;
+//    int status = exit_code;
+   
+//    // find the children threads that the current thread is waiting for
+//    if (q_empty(active_threads)) {
+//        kprintf("Running queue is empty\n");
+//        thread_exit();
+//    } else {
+//        kprintf("Running queue is not empty\n");
+//        index = q_getstart(active_threads);
+//        child_thread = (struct thread *) q_getguy(active_threads, index);
+//        kprintf("sys_ext for loop: current pid is %d, visiting thread is %d \n", curthread->t_pid, child_thread->t_pid);
+//    }
+//    for (index = q_getstart(active_threads); index != q_getend(active_threads); index = (index + 1) % q_getsize(active_threads)) {
+//        child_thread = (struct thread *) q_getguy(active_threads, index);
+//        kprintf("sys_ext for loop: current pid is %d, visiting thread is %d \n", curthread->t_pid, child_thread->t_pid);
+//        if (child_thread-> t_ppid == curthread->t_pid) {
+//            // waitpid(pid_t pid, int *status, int options);
+//            tf->tf_a0 = child_thread -> t_pid;
+//            tf->tf_a1 = &status;
+//            tf->tf_a2 = 0;
+//            int returned_exitcode = sys_waitpid(tf, *retval);
+//            // don't know how to check for failure
+//            kprintf("current exit code is %d \n", returned_exitcode);
+//        }
+//    }
+//    if (index == q_getend(active_threads)) {
+        curthread->t_exitcode = exit_code;
+	//int spl = splhigh();
+	// Set exit mode
+	assert(curthread->t_exit == 0);
+	curthread->t_exit = 1;
+	exitcode_table[curthread->t_pid] = exit_code;
+	//splx(spl);
+
+	
+	V(curthread->t_waitsem);
+	
+	while(curthread->t_waitsem->count == 1){
+		thread_yield();
+	}
+	
+
+	//assert(curspl == 0);
+	//int spl = splhigh();
+	//while(thread_hassleepers(curthread->t_waitsem)){
+		
+//		V(curthread->t_waitsem);
+	//}
+//	splx(spl);
+        thread_exit();
+
+    //assert(curspl == 0);
+    int spl = splhigh();
+
+    while (thread_hassleepers(curthread->t_sleepaddr)) {
+
+        V(curthread->t_waitsem);
+    }
+    splx(spl);
+    thread_exit();
+
+    // should never reach here
+    return 0;
+
+    //    }
+
+    // should never reach here
+    //return -1;
+
+}
+
+/*
+ * This function replaces the currently executing program with a newly 
+ * loaded program image:
+ * int execv(const char *program, char **args);
+ * 
+ */
+int sys_execv(struct trapframe *tf, int *retval) {
+
+    char *program = (char *) tf->tf_a0;
+    char **args = (char **) tf->tf_a1;
+    int nargs;
+
+    kprintf("in sys_execv: pid is %d\n", curthread->t_pid);
+
+
+    // acquire lock
+   // lock_acquire(exec_lock);
+
+    if (program == NULL || args == NULL) {
+
+        return EFAULT;
+    }
+
+    int result; // recording results returned from copy 
+    //create a local copy for the program name
+    char *name;
+    size_t size;
+
+    name = (char *) kmalloc(sizeof (char) * PATH_MAX);
+    if (name)
+        return ENOMEM;
+    
+
+    result = copyinstr((const_userptr_t) program, name, PATH_MAX, &size);
+    // check if the program name successfully copied
+    if (result) {
+        //kprintf("EXECV- copyinstr failed- %d\n",result);
+        kfree(name);
+
+        return result;
+    }
+    if (size == 0) {
+        kfree(name);
+
+        return EINVAL;
+    }
+
+    kprintf("program name is %s \n", name);
+    
+    //create a local copy for args[]
+    char **local_args;
+//    result = copyin((const_userptr_t) args, local_args, sizeof (char **));
+//    if (result) {
+//        kfree(name);
+//        kfree(local_args);
+//
+//        return EFAULT;
+//    }
+    int i = 0;
+    while (args[i] != NULL)
+        i++;
+
+    int argc = i + 1;
+
+    for (i = 0; i < argc; i++) {
+        int len = strlen(args[i]);
+        len++;
+        local_args[i] = (char*) kmalloc(len * sizeof (char));
+        if (local_args[i])
+            return ENOMEM;
+
+        result = copyinstr((const_userptr_t) args[i], local_args[i], len+1, &size);
+        if (result) {
+            kfree(name);
+           // kfree(local_args);
+
+            return EFAULT;
+        }
+
+    }
+    local_args[argc] = '\0';
+
+    as_destroy(curthread->t_vmspace);/////////////////////
+    // open the file and check if it succeeds
+    struct vnode *v; // an abstract representation of a file.
+    result = vfs_open(name, O_RDONLY, &v); // read only
+    if (result) {
+        kfree(name);
+       // kfree(local_args);
+
+        return result;
+    }
+
+    // store the previous address space 
+    struct addrspace *temp;
+    temp = curthread->t_vmspace;
+    // destroy it
+    if (curthread->t_vmspace != NULL) {
+        as_destroy(curthread->t_vmspace);//////////////////////
+        curthread->t_vmspace = NULL;
+    }
+
+    // create a new address space 
+    curthread->t_vmspace = as_create();
+    kprintf("New space created");
+    if (curthread->t_vmspace == NULL) {
+        kfree(name);
+       // kfree(local_args);
+        vfs_close(v);
+        curthread->t_vmspace = temp; // not sure if i need to restore this
+
+        return ENOMEM;
+    }
+
+    // activate address space 
+    as_activate(curthread->t_vmspace);
+
+    vaddr_t entrypoint, stackptr;
+    // load the program
+    result = load_elf(v, &entrypoint);
+    if (result) {
+        //thread_exit destroys curthread->t_vmspace
+        kfree(name);
+      //  kfree(local_args);
+        curthread->t_vmspace = temp;
+        as_activate(temp);
+	vfs_close(v);
+        return result;
+    }
+
+    // close file
+    vfs_close(v);
+
+    // define user stack
+    result = as_define_stack(curthread->t_vmspace, &stackptr);
+    if (result) {
+        kfree(name);
+      //  kfree(local_args);
+
+        return result;
+    }
+
+    // iterate through local args and copy it into the stack
+    int index = 0;
+    userptr_t ptr[argc];
+    for (index = argc - 1; index >= 0; index--) {
+       //char * argv; // string to copy
+        int length = strlen(local_args[index]);
+
+        // since stack increment by 4 every time, make sure len is a multiple of 4
+        // int ori_length = length;
+        if (length % 4 != 0) {
+            length = (length / 4 + 1) * 4;
+        }
+
+        //argv = kmalloc(sizeof (length));
+        // argv = kstrdup(local_args[index]);
+
+
+        //        i = 0;
+        //        for (i = 0; i < length; i++) {
+        //            // pack the extra space with \0
+        //            if (i >= ori_length)
+        //                argv[i] = '\0';
+        //            else
+        //                argv[i] = local_args[index][i];
+        //        }
+
+        stackptr -= length;
+        ptr[i] = stackptr;
+        result = copyoutstr((const void *) local_args[index], (userptr_t) stackptr, length + 1, NULL);
+        if (result) {
+            //kprintf("EXECV- copyout1 failed %d\n",result);
+            kfree(name);
+         //   kfree(local_args);
+           //free(argv);
+            return result;
+        }
+
+
+    }
+
+    stackptr -= 4;
+     char nullpointer = '\0';
+    result = copyout(nullpointer, stackptr, 4);
+    if (result)
+        return result;
+
+    for (i = argc - 1; i >= 0; i--) {
+        stackptr = stackptr - 4;
+        copyout(ptr + i, stackptr, 4);
+        kprintf("points to %x, holding %s \n",((int) ptr[i]), ptr[i]);
+    }
+
+    userptr_t address;
+    address = (userptr_t) stackptr;
+    stackptr = stackptr - 4;
+    copyout(&argc, stackptr, 4);
+
+    ///////////////////////////////////////////////////////////
+
+    //kfree(name);
+    //kfree(local_args);
+
+
+    // release lock
+   // lock_release(exec_lock);
+
+    /* Warp to user mode. */
+    md_usermode(nargs, address, stackptr, entrypoint);
+
+    /* md_usermode does not return */
+    panic("md_usermode returned\n");
+    return EINVAL;
+
+}

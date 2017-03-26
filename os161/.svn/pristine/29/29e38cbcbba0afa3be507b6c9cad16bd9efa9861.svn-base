@@ -1,0 +1,115 @@
+#include <types.h>
+#include <kern/errno.h>
+#include <lib.h>
+#include <machine/pcb.h>
+#include <machine/spl.h>
+#include <machine/trapframe.h>
+#include <kern/callno.h>
+#include <syscall.h>
+#include <kern/unistd.h>
+#include <thread.h>
+#include <curthread.h>
+#include <addrspace.h>
+#include <vm.h>
+#include <lib.h>
+
+
+/*
+ * fork
+ * Kernel level code: copy the address space and the trap frame 
+ *
+ */
+int sys_fork(struct trapframe *tf, int *retval)
+{
+    struct thread* child;
+    // copy the trap frame from the parent process to the child process
+    struct trapframe *child_frame = kmalloc(sizeof(struct trapframe));
+    memcpy(child_frame, tf, sizeof(struct trapframe));
+    
+    // create the new address space and frame for the child process
+    assert(curthread -> t_vmspace != NULL);
+    struct addrspace* child_as;
+    int return_value = as_copy(curthread -> t_vmspace, &child_as);
+    if(return_value == ENOMEM){
+        kfree(child_frame);
+        *retval = ENOMEM;
+        return -1;
+    }
+    
+    return_value = thread_fork(strcat(curthread->t_name, "'s child"), (void*)child_frame, 
+		    (unsigned long)child_as, md_forkentry, &child);
+    if(return_value == ENOMEM){
+        kfree(child_frame);
+        *retval = ENOMEM;
+        return -1;
+    }
+    
+    *retval = child->t_pid; 
+    return 0;
+}
+
+/*
+ * User level code for fork
+ */
+int md_forkentry(struct trapframe *tf, unsigned long vmspace)
+{
+	/*
+	 * This function is called by sys_fork to create a new child 
+         * process. 
+	 */
+    
+    // make a local trapframe
+    struct trapframe child_frame;
+    memcpy(&child_frame, tf, sizeof(struct trapframe));
+    
+    // copy the address space
+    struct addrspace *new_as = kmalloc(sizeof(struct addrspace));
+    int return_value = as_copy(&vmspace, &new_as);
+    if(return_value == ENOMEM){
+        kfree(new_as);
+        return -1;
+    }
+    
+    // change the register values
+    child_frame.tf_v0 = 0;
+    child_frame.tf_a3 = 0;
+    child_frame.tf_epc +=4;
+    
+    curthread->t_vmspace = new_as;
+    as_activate(curthread->t_vmspace);
+    
+    mips_usermode(&child_frame);
+    return 0;
+
+}
+
+/*
+ * Getpid returns the process id of the current process.
+ */
+int sys_getpid(struct trapframe *tf, int *retval)
+{
+
+	retval = curthread->t_pid;
+	return 0;
+
+}
+
+/*
+ * User level code for fork
+ */
+int sys_waitpid(struct trapframe *tf, int *retval)
+{
+	    return 0;
+
+}
+
+/*
+ * User level code for fork
+ */
+int sys__exit(struct trapframe *tf, int *retval)
+{
+    return 0;
+
+}
+
+

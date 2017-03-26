@@ -131,6 +131,54 @@
             <in>opt-synchprobs.h</in>
             <in>vers.c</in>
           </df>
+          <df name="ASST1">
+            <df name="machine">
+              <in>asmdefs.h</in>
+              <in>bus.h</in>
+              <in>ktypes.h</in>
+              <in>pcb.h</in>
+              <in>setjmp.h</in>
+              <in>specialreg.h</in>
+              <in>spl.h</in>
+              <in>switchframe.h</in>
+              <in>tlb.h</in>
+              <in>trapframe.h</in>
+              <in>types.h</in>
+              <in>vm.h</in>
+            </df>
+            <in>autoconf.c</in>
+            <in>autoconf.h</in>
+            <in>opt-dumbvm.h</in>
+            <in>opt-net.h</in>
+            <in>opt-netfs.h</in>
+            <in>opt-sfs.h</in>
+            <in>opt-synchprobs.h</in>
+            <in>vers.c</in>
+          </df>
+          <df name="ASST2">
+            <df name="machine">
+              <in>asmdefs.h</in>
+              <in>bus.h</in>
+              <in>ktypes.h</in>
+              <in>pcb.h</in>
+              <in>setjmp.h</in>
+              <in>specialreg.h</in>
+              <in>spl.h</in>
+              <in>switchframe.h</in>
+              <in>tlb.h</in>
+              <in>trapframe.h</in>
+              <in>types.h</in>
+              <in>vm.h</in>
+            </df>
+            <in>autoconf.c</in>
+            <in>autoconf.h</in>
+            <in>opt-dumbvm.h</in>
+            <in>opt-net.h</in>
+            <in>opt-netfs.h</in>
+            <in>opt-sfs.h</in>
+            <in>opt-synchprobs.h</in>
+            <in>vers.c</in>
+          </df>
         </df>
         <df name="conf">
         </df>
@@ -228,6 +276,7 @@
           <in>syscall.h</in>
           <in>test.h</in>
           <in>thread.h</in>
+          <in>trapframe.h</in>
           <in>types.h</in>
           <in>uio.h</in>
           <in>version.h</in>
@@ -269,7 +318,9 @@
           <in>thread.c</in>
         </df>
         <df name="userprog">
+          <in>file_calls.c</in>
           <in>loadelf.c</in>
+          <in>process_calls.c</in>
           <in>runprogram.c</in>
           <in>uio.c</in>
         </df>
@@ -375,6 +426,9 @@
         <df name="add">
           <in>add.c</in>
         </df>
+        <df name="addexec">
+          <in>addexec.c</in>
+        </df>
         <df name="argtest">
           <in>argtest.c</in>
         </df>
@@ -415,8 +469,17 @@
         <df name="bigfile">
           <in>bigfile.c</in>
         </df>
+        <df name="bigprog">
+          <in>bigprog.c</in>
+        </df>
+        <df name="btree">
+          <in>btree.c</in>
+        </df>
         <df name="conman">
           <in>conman.c</in>
+        </df>
+        <df name="console">
+          <in>console.c</in>
         </df>
         <df name="crash">
           <in>crash.c</in>
@@ -433,11 +496,20 @@
         <df name="dirtest">
           <in>dirtest.c</in>
         </df>
+        <df name="draw">
+          <in>draw.c</in>
+        </df>
+        <df name="exittest">
+          <in>exittest.c</in>
+        </df>
         <df name="f_test">
           <in>f_hdr.h</in>
           <in>f_read.c</in>
           <in>f_test.c</in>
           <in>f_write.c</in>
+        </df>
+        <df name="facts">
+          <in>facts.c</in>
         </df>
         <df name="farm">
           <in>farm.c</in>
@@ -447,6 +519,9 @@
         </df>
         <df name="filetest">
           <in>filetest.c</in>
+        </df>
+        <df name="fork">
+          <in>fork.c</in>
         </df>
         <df name="forkbomb">
           <in>forkbomb.c</in>
@@ -462,6 +537,9 @@
         </df>
         <df name="hash">
           <in>hash.c</in>
+        </df>
+        <df name="hasher">
+          <in>hasher.c</in>
         </df>
         <df name="hog">
           <in>hog.c</in>
@@ -479,11 +557,17 @@
           <in>matmult-orig.c</in>
           <in>matmult.c</in>
         </df>
+        <df name="multiply">
+          <in>multiply.c</in>
+        </df>
         <df name="palin">
           <in>palin.c</in>
         </df>
         <df name="parallelvm">
           <in>parallelvm.c</in>
+        </df>
+        <df name="printf">
+          <in>printf.c</in>
         </df>
         <df name="randcall">
           <in>calls.c</in>
@@ -495,6 +579,9 @@
         </df>
         <df name="rmtest">
           <in>rmtest.c</in>
+        </df>
+        <df name="sbrk">
+          <in>sbrk.c</in>
         </df>
         <df name="sink">
           <in>sink.c</in>
@@ -514,6 +601,16 @@
         <df name="tictac">
           <in>tictac.c</in>
         </df>
+        <df name="timeit">
+          <in>sieve.c</in>
+          <in>timeit.c</in>
+          <in>timeit.h</in>
+        </df>
+        <df name="triplebigprog">
+          <in>triple.c</in>
+          <in>triple.h</in>
+          <in>triplebigprog.c</in>
+        </df>
         <df name="triplehuge">
           <in>triple.c</in>
           <in>triple.h</in>
@@ -531,6 +628,9 @@
         </df>
         <df name="userthreads">
           <in>userthreads.c</in>
+        </df>
+        <df name="wait">
+          <in>wait.c</in>
         </df>
       </df>
     </df>

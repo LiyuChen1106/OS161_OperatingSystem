@@ -1,0 +1,73 @@
+#include <types.h>
+#include <kern/errno.h>
+#include <lib.h>
+#include <machine/pcb.h>
+#include <machine/spl.h>
+#include <machine/trapframe.h>
+#include <kern/callno.h>
+#include <syscall.h>
+#include <kern/unistd.h>
+#include <thread.h>
+#include <curthread.h>
+#include <addrspace.h>
+#include <vm.h>
+#include <lib.h>
+/*
+ * This function writes characters to stdout, implementing the following 
+ * funtion:
+ * int write(int fd, const void *buf, size_t nbytes>);
+ * It writes up to buflen bytes to the file specified by fd, at the location 
+ * in the current file, taking the data from the space pointed to by buf.
+ */
+
+int sys_write(struct trapframe *tf, int *retval)
+{
+    int fd = tf->tf_a0;
+    void* buf = tf->tf_a1;
+    size_t nbytes = tf->tf_a2;
+    
+    if(buf == NULL){
+        *retval = 0;
+        return EFAULT;
+    }
+    
+    int num = kprintf("%c", *(const char *)buf);
+    *retval = num;
+    return 0;
+}
+
+/*
+ * This function reads a character from stdin, implementing the following 
+ * funtion:
+ * int read(int fd, void *buf, size_t buflen);
+ * It reads up to buflen bytes from the file specified by fd, at the location 
+ * in the file specified by the current seek position of the file, and 
+ * stores them in the space pointed to by buf
+ */
+
+int sys_read(struct trapframe *tf, int *retval)
+{
+    int fd = tf->tf_a0;
+    void* buf = tf->tf_a1;
+    size_t buflen = tf->tf_a2;
+    
+    // make sure the arguments are valid
+    if(fd != 0 ){
+        *retval = -1;
+        return EBADF;
+    }else if(buf == NULL){
+        *retval = -1;
+        return EFAULT;
+    }else if(buflen <= 0){
+        *retval = -1;
+        return EIO;
+    }
+    
+    // read a character from the stdin and write to the pointed file
+    char input = getch();
+    int result = copyout(&input, buf, sizeof(input));
+    
+    return result;
+
+    
+}
